@@ -1,0 +1,10 @@
+.outer {
+    display: flex;
+    border: 2px solid red;
+    background-image: url("https://applemagazine.com/wp-content/uploads/2021/01/5-reasons-to-consider-Apple-refurbished-products.png");
+    background-color: aqua;
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center;
+    width: 100vw; /* Set width to viewport width */
+    height: 100vh; /* Set height to viewport height */
+}

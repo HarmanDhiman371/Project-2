@@ -1,10 +1,11 @@
 import './App.css';
 import Navbar from './components/Navbar'
+import  Main from './Pages/Main'
 function App() {
   return (
     <div className="App">
-       <h1>Harman</h1>
        <Navbar/>
+       <Main/>
     </div>
   );
 }
