@@ -1,8 +1,8 @@
 .navv{
     overflow:hidden;
     display: flex;
-    background-color: rgb(13, 18, 27);
-    color: rgb(50, 144, 31);
+    background-color: rgb(255, 255, 255);
+    color: rgb(11, 24, 9);
     align-items: center;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,7 +13,8 @@
    
 } */
  .logo{
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
     margin-left:40px;
     font-weight: bold;
  }
@@ -29,7 +30,7 @@
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(134, 197, 26);
+    color: rgb(0, 0, 0);
 }
 .links ul li a:hover{
     background-color:#4dcaff; 
