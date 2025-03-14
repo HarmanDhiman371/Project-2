@@ -1,0 +1,83 @@
+.access {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #edede9;
+    overflow: hidden;
+}
+
+.first {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arjan {
+    border: 2px solid red;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.in {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-image: url('https://th.bing.com/th/id/OIP.1GSNiSmowLx9wYQ7cwpEDwAAAA?rs=1&pid=ImgDetMain');
+    background-size: cover;
+    background-position: center;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.second {
+    width: 55%;
+    height: 90%;
+    display: flex;
+    margin-top: 1%;
+    /* border: 25px solid grey;
+    border-radius: 60px; */
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.special-offers {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.offer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.offer-list li {
+    font-size: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.offer-list li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    color: #ff4d4d;
+}

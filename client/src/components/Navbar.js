@@ -10,9 +10,11 @@ const Navbar = () =>{
                  <li><a href="/">Home</a></li>
                  <li><a href="/">Mobiles</a></li>
                  <li><a href="/">Watches</a></li>
-                 <li><a href="/">Laptops</a></li>
+                 <li><a href="/">Acessories</a></li>
+                 
                </ul>
             </div>
+            <button  className="sign-in" >Sign In</button>
         </nav>
     );
 };
