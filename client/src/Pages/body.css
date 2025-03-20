@@ -1,97 +1,167 @@
 .outer {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; /* Prevent overflow */
+  display: flex;
+  width: 100whcd;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  color: white;
 }
 
 .text-part {
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; /* Align content to the left */
-    padding-left: 4rem;
-    margin-top: 30px;
-    padding-right: 2rem; /* Add padding to the right for better spacing */
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 4rem;
+  padding-right: 2rem;
 }
 
 .main-text, .sub-heading, .description {
-    width: 100%; /* Ensure all text elements take full width */
-    margin: 0px; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-    text-align: left; /* Ensure text is aligned to the left */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .main-text {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #222;
-    text-shadow: #555;
-    margin-bottom: 2rem;
-    animation: fadeIn 2s ease-in-out, slideInFromLeft 1.5s ease-in-out;
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6f61, #ff3b2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out, slideInFromLeft 1.5s ease-in-out;
 }
 
 .sub-heading {
-    font-size: 2rem;
-    color: #555;
-    margin-bottom: 1rem; /* Add margin below the sub-heading */
-    animation: fadeIn 2.5s ease-in-out, slideInFromLeft 2s ease-in-out;
+  font-size: 2rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+  animation: fadeIn 2.5s ease-in-out, slideInFromLeft 2s ease-in-out;
 }
 
 .description {
-    font-size: 1.2rem;
-    color: #777;
-    margin-bottom: 2rem; /* Increased margin for better spacing */
-    animation: fadeIn 3s ease-in-out, slideInFromLeft 2.5s ease-in-out;
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 2rem;
+  animation: fadeIn 3s ease-in-out, slideInFromLeft 2.5s ease-in-out;
 }
 
 .explore-btn {
-    padding: 10px 20px;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-    animation: fadeIn 3.5s ease-in-out, slideInFromLeft 3s ease-in-out;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff6f61, #ff3b2f);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out, background 0.3s ease;
+  animation: fadeIn 3.5s ease-in-out, slideInFromLeft 3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .explore-btn:hover {
-    transform: scale(1.1);
-    background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.1);
+  background: linear-gradient(90deg, #ff3b2f, #ff6f61);
+}
+
+.explore-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.explore-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .img-part {
-    width: 50%;
-    height: 100%;
-    background-image: url('C:/Users/HARMANJEET SINGH/OneDrive/Desktop/personal-2/client/public/images/image.png');
-    background-image: url('https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2024/09/iphone-16-pro-thumbnail.jpg');
-    background-position: center;
-    background-size: cover;
-    animation: fadeIn 1s ease-in-out;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* background-image: url('https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2024/09/iphone-16-pro-thumbnail.jpg');
+  background-image: url('https://mcprod.tescomobile.com/media/wysiwyg/handsets/apple/iphone-16/display_small_2x.png?600061f54630'); */
+  background-position: center;
+  background-size: cover;
+  animation: fadeIn 1s ease-in-out;
+}
+ .im{
+    width: auto;
+    height: 80%;
+    
+ }
+
+/* Media query for responsiveness */
+@media (max-width: 900px) {
+  .outer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-part {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .main-text {
+    font-size: 3rem;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .img-part {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .explore-btn {
+    align-self: center;
+  }
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@media (max-width: 600px) {
+  .img-part {
+    height: 30vh;
+  }
+
+  .main-text {
+    font-size: 2.5rem;
+  }
+
+  .sub-heading {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .explore-btn {
+    width: 100%;
+  }
 }
 
-@keyframes slideInFromLeft {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-}
+@media (max-width: 400px) {
+  .img-part {
+    display: none;
+  }
 
-@keyframes slideInFromRight {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
-}
-
-@keyframes scaleUp {
-    from { transform: scale(0.9); }
-    to { transform: scale(1); }
+  .text-part {
+    padding: 1rem;
+  }
 }

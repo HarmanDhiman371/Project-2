@@ -1,16 +1,24 @@
 import './App.css';
-import Navbar from './components/Navbar'
-import  Main from './Pages/Main'
-import Acessories from './components/acessories';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Main from './Pages/Main';
+import Branding from './Pages/branding';  
+import MobilePage from './Pages/mobiles';
 import ProductSlider from './components/ProductSlider';
+
 function App() {
   return (
-    <div className="App">
-       <Navbar/>
-       <Main/>
-       <Acessories/>
-       <ProductSlider/>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/mobiles" element={<MobilePage />} />
+          <Route path="/branding" element={<Branding />} />
+          <Route path="/products" element={<ProductSlider />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

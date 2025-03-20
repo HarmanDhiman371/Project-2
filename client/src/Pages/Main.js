@@ -5,15 +5,15 @@ const Body = () => {
     return (
         <div className="outer">
             <div className="text-part">
-                <h1 className="main-text">Experience the Future Today</h1>
-                <h2 className="sub-heading">Discover the future of technology</h2>
+                <h1 className="main-text">Step Into the Future</h1>
+                <h2 className="sub-heading">Where Innovation Meets Style</h2>
                 <p className="description">
-                    Explore the latest innovations in mobile devices, smartwatches, and laptops.
-                    Stay ahead with cutting-edge technology and sleek designs.
+                    Discover the latest in mobile technology, smartwatches, and laptops.
+                    Experience cutting-edge designs and unparalleled performance.
                 </p>
-                <button className="explore-btn" style={{ width: '150px' }}>Explore Now</button>
+                <button className="explore-btn">Explore Now</button>
             </div>
-            <div className="img-part"></div>
+            <div className="img-part"><img src="https://mcprod.tescomobile.com/media/wysiwyg/handsets/apple/iphone-16/display_small_2x.png?600061f54630" alt="" className="im" /></div>
         </div>
     );
 }
