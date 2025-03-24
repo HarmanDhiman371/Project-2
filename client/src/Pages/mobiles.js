@@ -5,12 +5,19 @@ import 'slick-carousel/slick/slick-theme.css';
 import './MobilePage.css';
 
 const MobilePage = () => {
-  // Sample product data
+  // Banner images
+  const bannerImages = [
+    "/images/banner4.jpg",
+    "/images/banner2.jpg",
+    "/images/banner6.jpg",
+  ];
+
+  // Product data
   const iphoneProducts = [
     { id: 1, name: 'iPhone 14', price: '$999', image: '/images/iphone14.jpg' },
     { id: 2, name: 'iPhone 15', price: '$1099', image: '/images/iphone15.jpg' },
     { id: 3, name: 'iPhone 16', price: '$1299', image: '/images/iphone_16.jpg' },
-    { id: 4, name: 'iPhone 16pro', price: '$1699', image: '/images/iphone_16pro.jpg'},
+    { id: 4, name: 'iPhone 16pro', price: '$1699', image: '/images/iphone_16pro.jpg' },
   ];
 
   const samsungProducts = [
@@ -25,11 +32,7 @@ const MobilePage = () => {
     { id: 3, name: 'Vivo T5 5G', price: '$299', image: '/images/vivo-T5.jpg' },
   ];
 
-  const allProducts = [
-    ...iphoneProducts,
-    ...samsungProducts,
-    ...vivoProducts,
-  ];
+  const allProducts = [...iphoneProducts, ...samsungProducts, ...vivoProducts];
 
   // Slider settings
   const sliderSettings = {
@@ -40,6 +43,7 @@ const MobilePage = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -58,19 +62,38 @@ const MobilePage = () => {
     ],
   };
 
+  // Banner slider settings
+  const bannerSettings = {
+    dots: false,
+    infinite: true,
+    speed: 900,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true, // Smooth transition effect
+  };
+
   return (
     <div className="mobile-page">
+      {/* Banner Image Slider */}
+      <div className="banner-slider">
+        <Slider {...bannerSettings}>
+          {bannerImages.map((image, index) => (
+            <div key={index} className="banner-slide">
+              <img src={image} alt={`Slide ${index + 1}`} className="banner-image" />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
       {/* iPhone Slider */}
       <section className="slider-section">
-        {/* <img src="https://www.apple.com/euro/iphone-16/a/generic/images/meta/iphone-16_overview__fcivqu9d5t6q_og.png" alt="" className='iphone-branding'/> */}
         <h2>iPhone Collection</h2>
         <Slider {...sliderSettings}>
           {iphoneProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <div
-                className="product-image"
-                style={{ backgroundImage: `url(${product.image})` }}
-              ></div>
+              <div className="product-image" style={{ backgroundImage: `url(${product.image})` }}></div>
               <div className="product-info">
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
@@ -87,10 +110,7 @@ const MobilePage = () => {
         <Slider {...sliderSettings}>
           {samsungProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <div
-                className="product-image"
-                style={{ backgroundImage: `url(${product.image})` }}
-              ></div>
+              <div className="product-image" style={{ backgroundImage: `url(${product.image})` }}></div>
               <div className="product-info">
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
@@ -107,10 +127,7 @@ const MobilePage = () => {
         <Slider {...sliderSettings}>
           {vivoProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <div
-                className="product-image"
-                style={{ backgroundImage: `url(${product.image})` }}
-              ></div>
+              <div className="product-image" style={{ backgroundImage: `url(${product.image})` }}></div>
               <div className="product-info">
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>
@@ -127,10 +144,7 @@ const MobilePage = () => {
         <Slider {...sliderSettings}>
           {allProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <div
-                className="product-image"
-                style={{ backgroundImage: `url(${product.image})` }}
-              ></div>
+              <div className="product-image" style={{ backgroundImage: `url(${product.image})` }}></div>
               <div className="product-info">
                 <h3>{product.name}</h3>
                 <p>{product.price}</p>

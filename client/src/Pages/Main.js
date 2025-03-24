@@ -3,6 +3,7 @@ import './body.css';
 
 const Body = () => {
     return (
+        <div className="main">
         <div className="outer">
             <div className="text-part">
                 <h1 className="main-text">Step Into the Future</h1>
@@ -14,6 +15,13 @@ const Body = () => {
                 <button className="explore-btn">Explore Now</button>
             </div>
             <div className="img-part"><img src="https://mcprod.tescomobile.com/media/wysiwyg/handsets/apple/iphone-16/display_small_2x.png?600061f54630" alt="" className="im" /></div>
+        </div>
+        <h1 style={ {color:"white" , backgroundColor:"black" }}> Why you should choose us</h1>
+        <div className="branding" >
+            <div className="ad">1</div>
+            <div className="ad">2</div>
+            <div className="ad">3</div>
+        </div>
         </div>
     );
 }
