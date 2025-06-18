@@ -1,6 +1,5 @@
 import React from "react";
-import './body.css';
-
+ import "./body.css";
 const Body = () => {
     return (
         <div className="main">
@@ -12,7 +11,7 @@ const Body = () => {
                     Discover the latest in mobile technology, smartwatches, and laptops.
                     Experience cutting-edge designs and unparalleled performance.
                 </p>
-                <button className="explore-btn">Explore Now</button>
+                <a href="/signup"><button className="explore-btn" src="/signup">Explore Now</button></a>
             </div>
             <div className="img-part"><img src="https://mcprod.tescomobile.com/media/wysiwyg/handsets/apple/iphone-16/display_small_2x.png?600061f54630" alt="" className="im" /></div>
         </div>

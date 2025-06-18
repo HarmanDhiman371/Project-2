@@ -90,19 +90,18 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  /* background-image: url('https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2024/09/iphone-16-pro-thumbnail.jpg');
-  background-image: url('https://mcprod.tescomobile.com/media/wysiwyg/handsets/apple/iphone-16/display_small_2x.png?600061f54630'); */
+  /* background-image: url('https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2024/09/iphone-16-pro-thumbnail.jpg'); */
+  /* background-image: url('https://mcprod.tescomobile.com/media/wysiwyg/handsets/apple/iphone-16/display_small_2x.png?600061f54630'); */
   background-position: center;
   background-size: cover;
   animation: fadeIn 1s ease-in-out;
 }
- .im{
-    width: auto;
-    height: 80%;
-    
- }
 
-/* Media query for responsiveness */
+.im {
+  width: auto;
+  height: 80%;
+}
+
 @media (max-width: 900px) {
   .outer {
     flex-direction: column;
@@ -165,7 +164,8 @@
     padding: 1rem;
   }
 }
-.branding{
+
+.branding {
   border: 2px solid red;
   height: 500px;
   width: 100%;
@@ -174,10 +174,10 @@
   justify-content: space-evenly;
   background-color: #0a0a0a;
 }
-.ad{
+
+.ad {
   height: 300px;
   width: 300px;
   border-radius: 30px;
-  /* border: 2px solid blue; */
-background-color: rgb(242, 242, 242);
+  background-color: rgb(242, 242, 242);
 }
